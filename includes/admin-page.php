@@ -573,7 +573,7 @@ if (!defined('ABSPATH')) {
                     <?php
                     settings_fields('instapulse_settings');
                     $options = get_option('instapulse_options', array());
-                    $current_sample_rate = isset($options['sample_rate']) ? (int) $options['sample_rate'] : 5;
+                    $current_sample_rate = isset($options['sample_rate']) ? (int) $options['sample_rate'] : 2;
                     $current_slow_query_threshold = isset($options['slow_query_threshold']) ? (int) $options['slow_query_threshold'] : 50;
                     ?>
                     <table class="form-table">
