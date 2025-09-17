@@ -1,21 +1,46 @@
 <?php
 /**
  * Plugin Name: InstaPulse
- * Plugin URI: https://instawp.com/
+ * Plugin URI: https://github.com/instawp/instapulse
  * Description: A light-weight APM tool for WordPress. Tracks plugin load times and frontend requests for performance monitoring.
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author: InstaWP
+ * Author URI: https://instawp.com/
  * License: GPL v2 or later
  * Text Domain: instapulse
+ * Update URI: https://github.com/instawp/instapulse/
+ * GitHub Plugin URI: instawp/instapulse
+ * GitHub Branch: main
+ * Requires WP: 5.0
+ * Requires PHP: 7.4
  */
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-define('INSTAPULSE_VERSION', '1.2.0');
+define('INSTAPULSE_VERSION', '1.3.0');
 define('INSTAPULSE_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('INSTAPULSE_PLUGIN_PATH', plugin_dir_path(__FILE__));
+
+// Initialize GitHub update checker
+if (!class_exists('\YahnisElsts\PluginUpdateChecker\v5\PucFactory')) {
+    require_once plugin_dir_path(__FILE__) . 'lib/plugin-update-checker/plugin-update-checker.php';
+}
+
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$instapulseUpdateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/instawp/instapulse/', // Replace with actual GitHub repo URL
+    __FILE__,
+    'instapulse'
+);
+
+// Set the branch that contains stable releases (default is 'master')
+$instapulseUpdateChecker->setBranch('main');
+
+// Optional: For private repositories, uncomment and add your GitHub personal access token
+// $instapulseUpdateChecker->setAuthentication('your-github-token-here');
 
 class InstaPulse {
 

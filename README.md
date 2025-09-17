@@ -128,6 +128,14 @@ This plugin is licensed under the GPLv2 (or later) license.
 
 ## Changelog
 
+### Version 1.3.0
+- **Added**: GitHub Auto-Updates - Integrated Plugin Update Checker for automatic updates from GitHub releases
+- **Improved**: Stream Wrapper Timing Accuracy - Lowered detection threshold from 0.5ms to 0.1ms for more precise measurements
+- **Fixed**: Memory Usage Accumulation - Corrected plugin-level memory tracking to prevent over-inflation
+- **Enhanced**: File Operation Tracking - Better accuracy in capturing small file operations that were previously missed
+- **Optimized**: Performance Measurement Logic - Simplified timing approach while maintaining accuracy
+- **Updated**: MU Plugin Architecture - Enhanced timing precision without micro-level complexity
+
 ### Version 1.2.0
 - **Added**: CSS/JS Asset Tracking - Monitor all stylesheets and scripts
 - **Added**: Asset Source Attribution - Identify if assets come from plugins, themes, or core

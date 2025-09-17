@@ -27,6 +27,7 @@ class InstaPulse_Stream_Wrapper {
     private $file_path;
     private $start_time;
     private $start_memory;
+    private $wrapper_overhead_time = 0;
 
     /**
      * Initialize the stream wrapper
@@ -101,9 +102,7 @@ class InstaPulse_Stream_Wrapper {
             stream_wrapper_register('file', __CLASS__);
         }
 
-        if ($this->handle && $should_track) {
-            $this->track_file_operation('open');
-        }
+        // Only track on close for simplicity - this captures the full file operation
 
         return $this->handle !== false;
     }
@@ -276,10 +275,9 @@ class InstaPulse_Stream_Wrapper {
             // Use the larger of current or peak memory difference
             $memory_used = max($memory_used_current, $memory_used_peak);
 
-            // Memory calculations (debug logging removed for performance)
-
-            // Higher threshold for performance - track if > 0.5ms or > 4KB memory
-            if ($load_time > 0.5 || $memory_used > 4096) {
+            // Lower threshold from 0.5ms to 0.1ms to capture more operations
+            // This will give more accurate total timing without being overly granular
+            if ($load_time > 0.1 || $memory_used > 1024) { // 0.1ms or 1KB
                 self::$profiler->record_plugin_load($this->file_path, $load_time, $memory_used);
             }
         }

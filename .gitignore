@@ -1,0 +1,30 @@
+# Development files
+.DS_Store
+*.log
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Plugin Update Checker development files (keep the core library)
+/lib/plugin-update-checker/examples/
+/lib/plugin-update-checker/tests/
+/lib/plugin-update-checker/.git/
+/lib/plugin-update-checker/.github/
+
+# Backup files
+*.bak
+*~
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# AI Files
+CLAUDE.md
+ROADMAP.md
+RELEASE.md
+.claude

@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 
 // Define constants
 define('INSTAPULSE_MU_LOADED', true);
-define('INSTAPULSE_MU_VERSION', '1.0.0');
+define('INSTAPULSE_MU_VERSION', '1.3.0');
 
 /**
  * InstaPulse MU Plugin main class
@@ -530,15 +530,16 @@ class InstaPulse_MU {
             $this->plugin_memory_snapshots[$plugin_name] = $current_memory;
         }
 
+        // Accumulate load time
+        $this->plugin_timings[$plugin_name]['load_time'] += $load_time;
+        $this->plugin_timings[$plugin_name]['files_loaded']++;
+
         // Calculate plugin-level memory usage from first file to current
+        // This gives cumulative memory growth for the plugin, not individual file memory
         $plugin_memory_usage = max(0, $current_memory - $this->plugin_memory_snapshots[$plugin_name]);
 
-        // Memory tracking (debug logging removed for performance)
-
-        $this->plugin_timings[$plugin_name]['load_time'] += $load_time;
-        // Use the cumulative plugin memory instead of individual file memory
+        // Use the current plugin-level memory usage (not accumulated per file)
         $this->plugin_timings[$plugin_name]['memory_usage'] = $plugin_memory_usage;
-        $this->plugin_timings[$plugin_name]['files_loaded']++;
 
         // Memory logging removed for performance
     }

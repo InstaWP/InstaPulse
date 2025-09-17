@@ -259,7 +259,6 @@ if (!defined('ABSPATH')) {
                                             <span class="instapulse-theme-icon">🎨</span>
                                         <?php endif; ?>
                                         <strong><?php echo esc_html($data['name']); ?></strong>
-                                        <small class="instapulse-profile-count">(<?php echo $profile_count; ?> samples)</small>
                                     </td>
                                     <td>
                                         <div class="instapulse-load-time-container">
