@@ -419,7 +419,6 @@ if (!defined('ABSPATH')) {
                                 <th>Load Time (ms)</th>
                                 <th>Memory</th>
                                 <th>Queries</th>
-                                <th>IP Address</th>
                                 <th>Timestamp</th>
                             </tr>
                         </thead>
@@ -446,7 +445,6 @@ if (!defined('ABSPATH')) {
                                     <td><?php echo number_format($request['load_time'], 2); ?></td>
                                     <td><?php echo isset($request['memory_usage']) ? size_format($request['memory_usage']) : 'N/A'; ?></td>
                                     <td><?php echo isset($request['queries']) ? $request['queries'] : 'N/A'; ?></td>
-                                    <td><?php echo esc_html($request['ip_address']); ?></td>
                                     <td><?php echo esc_html(date('M j, Y H:i:s', strtotime($request['timestamp']))); ?></td>
                                 </tr>
                             <?php endforeach; ?>

@@ -756,26 +756,6 @@ class InstaPulse_MU {
         return 'Unknown';
     }
 
-    /**
-     * Get user IP address
-     */
-    private function get_user_ip() {
-        $ip_keys = array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR');
-
-        foreach ($ip_keys as $key) {
-            if (array_key_exists($key, $_SERVER) === true) {
-                foreach (explode(',', $_SERVER[$key]) as $ip) {
-                    $ip = trim($ip);
-
-                    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== false) {
-                        return $ip;
-                    }
-                }
-            }
-        }
-
-        return $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
-    }
 
     /**
      * Save profiling data at shutdown
@@ -799,7 +779,6 @@ class InstaPulse_MU {
             'request_type' => $this->categorize_request($_SERVER['REQUEST_URI'] ?? ''),
             'page_type' => $this->get_page_type(),
             'method' => $_SERVER['REQUEST_METHOD'] ?? 'GET',
-            'ip_address' => $this->get_user_ip(),
             'query_count' => get_num_queries(),
             'slow_queries' => $this->slow_queries,
             'assets' => array_values($this->assets)

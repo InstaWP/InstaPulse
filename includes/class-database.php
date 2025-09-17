@@ -61,7 +61,6 @@ class InstaPulse_Database {
             request_type varchar(50) DEFAULT 'page',
             page_type varchar(100) DEFAULT NULL,
             method varchar(10) DEFAULT 'GET',
-            ip_address varchar(45) DEFAULT NULL,
             query_count int(11) DEFAULT 0,
             created_at timestamp DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (id),
@@ -152,11 +151,10 @@ class InstaPulse_Database {
             'request_type' => isset($profile_data['request_type']) ? $profile_data['request_type'] : 'page',
             'page_type' => isset($profile_data['page_type']) ? substr($profile_data['page_type'], 0, 100) : null,
             'method' => isset($profile_data['method']) ? $profile_data['method'] : 'GET',
-            'ip_address' => isset($profile_data['ip_address']) ? $profile_data['ip_address'] : null,
             'query_count' => isset($profile_data['query_count']) ? (int) $profile_data['query_count'] : 0
         );
 
-        $formats = array('%s', '%f', '%d', '%s', '%d', '%s', '%s', '%s', '%s', '%s', '%s', '%d');
+        $formats = array('%s', '%f', '%d', '%s', '%d', '%s', '%s', '%s', '%s', '%s', '%d');
 
         $result = $wpdb->insert($this->table_name, $data, $formats);
 

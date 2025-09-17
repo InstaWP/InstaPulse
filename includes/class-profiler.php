@@ -328,7 +328,6 @@ class InstaPulse_Profiler {
                     request_type as type,
                     page_type,
                     method,
-                    ip_address,
                     total_time as load_time,
                     total_memory as memory_usage,
                     query_count as queries,
