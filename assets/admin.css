@@ -1,0 +1,545 @@
+.instapulse-admin {
+    max-width: 100%;
+}
+
+.instapulse-dashboard {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.instapulse-section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.instapulse-section h2 {
+    background: #f8f9fa;
+    margin: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 8px 8px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.instapulse-card {
+    padding: 20px;
+}
+
+.instapulse-summary {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #0073aa;
+    flex-wrap: wrap;
+}
+
+.instapulse-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.instapulse-stat-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.instapulse-stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.instapulse-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.instapulse-table th,
+.instapulse-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.instapulse-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.instapulse-table td {
+    font-size: 13px;
+}
+
+.instapulse-table tr:hover {
+    background: #f8f9fa;
+}
+
+.instapulse-performance {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.instapulse-performance.fast {
+    background: #d4edda;
+    color: #155724;
+}
+
+.instapulse-performance.medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.instapulse-performance.slow {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.instapulse-method {
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.instapulse-method-get {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.instapulse-method-post {
+    background: #d4edda;
+    color: #155724;
+}
+
+.instapulse-method-put {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.instapulse-method-delete {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.instapulse-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.instapulse-summary-item {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.instapulse-summary-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.instapulse-big-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0073aa;
+}
+
+.instapulse-big-number.instapulse-error {
+    color: #d63384;
+}
+
+.instapulse-error-indicator {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.instapulse-request-type {
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.instapulse-request-type-page {
+    background: #e7f3ff;
+    color: #0066cc;
+}
+
+.instapulse-request-type-api {
+    background: #e6f7ff;
+    color: #1890ff;
+}
+
+.instapulse-request-type-asset {
+    background: #f6ffed;
+    color: #52c41a;
+}
+
+.instapulse-request-type-image {
+    background: #fff2e8;
+    color: #fa8c16;
+}
+
+.instapulse-request-type-feed {
+    background: #f9f0ff;
+    color: #722ed1;
+}
+
+.instapulse-page-type {
+    display: block;
+    color: #666;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.instapulse-phases {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #28a745;
+}
+
+.instapulse-phases h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.instapulse-phases-table {
+    margin: 0;
+}
+
+.instapulse-phases-table th {
+    background: #fff;
+    font-size: 13px;
+}
+
+.instapulse-estimated {
+    color: #666;
+    font-style: italic;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.instapulse-theme-row {
+    background: #f0f8ff !important;
+    border-left: 3px solid #0073aa;
+}
+
+.instapulse-theme-row:hover {
+    background: #e6f3ff !important;
+}
+
+.instapulse-note {
+    margin-top: 15px;
+    padding: 10px;
+    background: #e7f3ff;
+    border-left: 4px solid #0073aa;
+    font-size: 13px;
+    color: #333;
+}
+
+.instapulse-actions {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+}
+
+.instapulse-actions .button {
+    padding: 8px 16px;
+}
+
+/* Additional CSS classes for InstaPulse elements */
+.instapulse-notice {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    border-left: 4px solid;
+}
+
+.instapulse-notice-warning {
+    background: #fff3cd;
+    border-left-color: #ffc107;
+    color: #856404;
+}
+
+.instapulse-insights {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #17a2b8;
+}
+
+.instapulse-insights h3 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.instapulse-insight {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.instapulse-insight-info {
+    background: #d1ecf1;
+    border-left: 4px solid #17a2b8;
+    color: #0c5460;
+}
+
+.instapulse-insight-warning {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+}
+
+.instapulse-insight-error {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+}
+
+.instapulse-insight-success {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    color: #155724;
+}
+
+.instapulse-confidence-high {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.instapulse-confidence-medium {
+    color: #ffc107;
+    font-weight: 600;
+}
+
+.instapulse-confidence-low {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.instapulse-confidence-very {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.instapulse-profile-count {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 11px;
+}
+
+.instapulse-theme-icon {
+    font-size: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Load time visual bars */
+.instapulse-load-time-container {
+    position: relative;
+    width: 100%;
+    min-width: 120px;
+    height: 25px;
+    background: #f1f1f1;
+    border-radius: 3px;
+    overflow: visible; /* Changed to allow outside text */
+}
+
+.instapulse-load-time-bar {
+    height: 100%;
+    border-radius: 3px;
+    position: relative;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.instapulse-bar-fast {
+    background: linear-gradient(90deg, #28a745, #34ce57);
+}
+
+.instapulse-bar-medium {
+    background: linear-gradient(90deg, #ffc107, #ffed4e);
+}
+
+.instapulse-bar-slow {
+    background: linear-gradient(90deg, #dc3545, #e74c3c);
+}
+
+.instapulse-load-time-text {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0 6px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Ensure text is readable on light bars */
+.instapulse-bar-medium .instapulse-load-time-text {
+    color: #333;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+}
+
+/* Outside text for small bars */
+.instapulse-load-time-text-outside {
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .instapulse-summary {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .instapulse-table {
+        font-size: 12px;
+    }
+
+    .instapulse-table th,
+    .instapulse-table td {
+        padding: 8px 10px;
+    }
+
+    .instapulse-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Slow Query Styles */
+.instapulse-time.fast { color: #28a745; font-weight: 600; }
+.instapulse-time.medium { color: #ffc107; font-weight: 600; }
+.instapulse-time.slow { color: #dc3545; font-weight: 600; }
+
+/* URL Link Styles */
+.instapulse-table a {
+    color: #0073aa;
+    text-decoration: none;
+    word-break: break-all;
+    font-size: 13px;
+}
+
+.instapulse-table a:hover {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Sampling Notice Styles */
+.instapulse-sampling-notice {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.instapulse-sampling-icon {
+    font-size: 24px;
+    margin-right: 16px;
+    opacity: 0.9;
+}
+
+.instapulse-sampling-content {
+    flex: 1;
+}
+
+.instapulse-sampling-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.instapulse-sampling-text {
+    font-size: 14px;
+    opacity: 0.95;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.instapulse-sampling-text strong {
+    font-weight: 700;
+    color: #fff;
+}
+
+.instapulse-sampling-action {
+    margin-top: 8px;
+}
+
+.instapulse-sampling-link {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white !important;
+    text-decoration: none !important;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.instapulse-sampling-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .instapulse-sampling-notice {
+        background: linear-gradient(135deg, #4c6ef5 0%, #6c5ce7 100%);
+        box-shadow: 0 4px 12px rgba(76, 110, 245, 0.2);
+    }
+}
