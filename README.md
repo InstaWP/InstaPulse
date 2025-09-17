@@ -1,4 +1,4 @@
-# InstaPulse - WordPress Performance Monitor
+# InstaPulse - WordPress Performance Monitor (Beta)
 
 InstaPulse is a lightweight WordPress plugin that provides accurate application performance monitoring by tracking individual plugin load times, database query performance, and frontend request metrics. It uses advanced profiling techniques to measure performance without significantly impacting your site's speed.
 
